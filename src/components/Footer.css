@@ -65,7 +65,7 @@
 .social-links a:hover {
     background-color: var(--color-primary);
     box-shadow: 0 0 15px var(--color-primary);
-    color: #000;
+    color: var(--neon-btn-text);
     transform: translateY(-3px);
 }
 

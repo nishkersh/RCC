@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
     const [dropdown, setDropdown] = useState(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
 
     const handleMouseEnter = (menu) => setDropdown(menu);
     const handleMouseLeave = () => setDropdown(null);
@@ -81,14 +89,20 @@ const Navbar = () => {
                             </ul>
                         )}
                     </li>
-                    <li className="nav-item mobile-only" style={{ padding: '0' }}>
+                    <li className="nav-item mobile-only" style={{ padding: '0', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
+                        <button onClick={toggleTheme} style={{ background: 'var(--color-bg-secondary)', border: '1px solid var(--color-border)', borderRadius: '50px', padding: '8px 16px', color: 'var(--color-text-main)', fontSize: '1rem', cursor: 'pointer', display: 'flex', gap: '8px', alignItems: 'center' }}>
+                            {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+                        </button>
                         <div className="navbar-action">
                              <Link to="/get-involved/member" className="btn btn-primary" onClick={closeMobileMenu}>Join the Club</Link>
                         </div>
                     </li>
                 </ul>
 
-                <div className="navbar-action desktop-only">
+                <div className="navbar-action desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <button onClick={toggleTheme} style={{ background: 'transparent', border: 'none', color: 'var(--color-text-main)', fontSize: '1.4rem', cursor: 'pointer', transition: 'transform 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0.5rem', borderRadius: '50%' }} aria-label="Toggle Theme">
+                        {theme === 'light' ? '🌙' : '☀️'}
+                    </button>
                     <Link to="/get-involved/member" className="btn btn-primary">Join the Club</Link>
                 </div>
             </div>

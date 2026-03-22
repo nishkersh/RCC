@@ -2,7 +2,7 @@
 
 /* --- Hero --- */
 .mv-hero {
-    background: radial-gradient(circle at center top, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle at center top, rgba(var(--rgb-primary), 0.15) 0%, transparent 70%);
     border-bottom: 1px solid var(--color-border);
     padding: 5rem 1rem 6rem;
     text-align: center;
@@ -19,7 +19,7 @@
 }
 .mv-hero h1 {
     color: var(--color-text-main);
-    text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+    text-shadow: 0 0 15px rgba(var(--rgb-primary), var(--glow-opacity, 0.5));
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
@@ -68,7 +68,7 @@
 }
 .mv-who-heading span {
     color: var(--color-primary);
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    text-shadow: 0 0 10px rgba(var(--rgb-primary), var(--glow-opacity, 0.5));
 }
 .mv-who-accent {
     width: 60px;
@@ -90,7 +90,7 @@
 }
 .mv-glass-card .highlight {
     color: var(--color-secondary);
-    text-shadow: 0 0 10px rgba(254, 9, 121, 0.5);
+    text-shadow: 0 0 10px rgba(var(--rgb-secondary), var(--glow-opacity, 0.5));
     font-weight: 600;
 }
 .mv-glass-divider {
@@ -223,7 +223,7 @@
     color: var(--color-text-main);
 }
 .mv-pillar.serve .mv-pillar-icon {
-    background: rgba(0, 242, 254, 0.15);
+    background: rgba(var(--rgb-primary), 0.15);
 }
 .mv-pillar.serve .mv-pillar-label {
     color: var(--color-primary);
@@ -235,7 +235,7 @@
     color: var(--color-text-main);
 }
 .mv-pillar.empower .mv-pillar-icon {
-    background: rgba(254, 9, 121, 0.1);
+    background: rgba(var(--rgb-secondary), 0.1);
 }
 .mv-pillar.empower .mv-pillar-label {
     color: var(--color-secondary);
@@ -247,7 +247,7 @@
     color: var(--color-text-main);
 }
 .mv-pillar.collaborate .mv-pillar-icon {
-    background: rgba(0, 242, 254, 0.1);
+    background: rgba(var(--rgb-primary), 0.1);
 }
 .mv-pillar.collaborate .mv-pillar-label {
     color: var(--color-text-main);
@@ -321,12 +321,12 @@
     height: 50px;
     border-radius: 50%;
     background: var(--color-primary);
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+    box-shadow: 0 0 15px rgba(var(--rgb-primary), 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1rem auto;
-    color: #000;
+    color: var(--neon-btn-text);
     font-weight: 800;
     font-size: 1.4rem;
 }
@@ -399,14 +399,14 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: rgba(0, 242, 254, 0.15);
+    background: rgba(var(--rgb-primary), 0.15);
     margin: 0 auto 1.25rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    border: 3px solid rgba(0, 242, 254, 0.4);
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+    border: 3px solid rgba(var(--rgb-primary), 0.4);
+    box-shadow: 0 0 15px rgba(var(--rgb-primary), 0.3);
 }
 .mv-president-card h3 {
     color: var(--color-text-main);
@@ -442,7 +442,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(0, 242, 254, 0.1) 0%, transparent 60%);
+    background: radial-gradient(circle at center, rgba(var(--rgb-primary), 0.1) 0%, transparent 60%);
     pointer-events: none;
 }
 .mv-united-content {

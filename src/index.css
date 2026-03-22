@@ -1,29 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  /* Neon Palette */
-  --color-primary: #00f2fe;      /* Electric Cyan */
-  --color-secondary: #fe0979;    /* Hot Magenta */
-  --color-accent: rgba(255, 255, 255, 0.05);
+  /* LIGHT THEME: Neon Red & Gold */
+  --color-primary: #ff0055;      /* Neon Red/Pink */
+  --color-secondary: #ffb703;    /* Golden Yellow */
+  --color-accent: rgba(255, 0, 85, 0.05);
   
   /* Text */
+  --color-text-dark: #111111;    
+  --color-text-light: #ffffff;
+  --color-text-main: #111111;
+  --color-text-muted: #555555;
+  
+  /* Glassmorphism Backgrounds */
+  --color-bg-white: rgba(255, 255, 255, 0.75); 
+  --color-bg-light: transparent;     
+  --color-bg-secondary: rgba(255, 0, 85, 0.05);
+  --color-border: rgba(255, 0, 85, 0.15);
+
+  /* Gradients */
+  --color-grad-dark: #ff4d6d;    
+  --color-grad-end: #ff0055;     
+
+  /* Neon Glows */
+  --neon-glow-subtle: rgba(255, 0, 85, 0.15);
+  --neon-glow: rgba(255, 0, 85, 0.4);
+  --neon-glow-strong: rgba(255, 0, 85, 0.8);
+  --neon-glow-secondary: rgba(255, 183, 3, 0.15);
+  --neon-btn-text: #ffffff;
+
+  --font-main: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --layout-max-width: 1200px;
+}
+
+[data-theme="dark"] {
+  /* DARK THEME: Neon Cyan & Magenta */
+  --color-primary: #00f2fe;      
+  --color-secondary: #fe0979;    
+  --color-accent: rgba(255, 255, 255, 0.05);
+  
   --color-text-dark: #ffffff;    
   --color-text-light: #ffffff;
   --color-text-main: #ffffff;
   --color-text-muted: #b0b8c1;
   
-  /* Glassmorphism Backgrounds */
   --color-bg-white: rgba(20, 20, 30, 0.4); 
   --color-bg-light: transparent;     
   --color-bg-secondary: rgba(0, 0, 0, 0.2);
   --color-border: rgba(255, 255, 255, 0.1);
 
-  /* Gradients */
   --color-grad-dark: #4facfe;    
   --color-grad-end: #00f2fe;     
 
-  --font-main: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --layout-max-width: 1200px;
+  /* Neon Glows */
+  --neon-glow-subtle: var(--neon-glow-subtle);
+  --neon-glow: var(--neon-glow);
+  --neon-glow-strong: var(--neon-glow-strong);
+  --neon-glow-secondary: var(--neon-glow-secondary);
+  --neon-btn-text: #000000;
 }
 
 * {
@@ -35,12 +69,17 @@
 body {
   margin: 0;
   font-family: var(--font-main);
-  background: linear-gradient(-45deg, #0e051c, #0a1128, #16082b, #071b26);
+  background: linear-gradient(-45deg, #fdfbfb, #ebedee, #ffecd2, #fcb69f);
   background-size: 400% 400%;
   animation: bgGradient 20s ease infinite;
   color: var(--color-text-main);
   min-height: 100vh;
   line-height: 1.6;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(-45deg, #0e051c, #0a1128, #16082b, #071b26);
+  background-size: 400% 400%;
 }
 
 @keyframes bgGradient {
@@ -93,16 +132,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
   background: linear-gradient(90deg, var(--color-primary), var(--color-grad-dark));
-  color: #000;
+  color: var(--neon-btn-text);
   border: none;
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 15px var(--neon-glow);
   font-weight: 700;
 }
 
 .btn-primary:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
-  color: #000;
+  box-shadow: 0 0 25px var(--neon-glow-strong);
+  color: var(--neon-btn-text);
 }
 
 .btn-outline {

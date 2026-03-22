@@ -2,7 +2,7 @@
 
 /* ---------- HERO ---------- */
 .imp-hero {
-  background: radial-gradient(circle at center top, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle at center top, rgba(var(--rgb-primary), 0.15) 0%, transparent 70%);
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text-main);
   text-align: center;
@@ -13,7 +13,7 @@
   font-weight: 800;
   margin-bottom: 16px;
   color: var(--color-text-main);
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+  text-shadow: 0 0 15px rgba(var(--rgb-primary), var(--glow-opacity, 0.5));
 }
 .imp-hero p {
   font-size: 1.15rem;
@@ -219,7 +219,7 @@
 
 /* ---------- CTA ---------- */
 .imp-cta {
-  background: radial-gradient(circle at center bottom, rgba(254, 9, 121, 0.15) 0%, transparent 80%);
+  background: radial-gradient(circle at center bottom, rgba(var(--rgb-secondary), 0.15) 0%, transparent 80%);
   border-top: 1px solid var(--color-border);
   text-align: center;
   padding: 80px 24px;
