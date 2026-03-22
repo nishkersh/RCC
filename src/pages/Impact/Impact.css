@@ -1,0 +1,449 @@
+/* ===== IMPACT PAGES — shared CSS for Community, International, Vocational ===== */
+
+/* ---------- HERO ---------- */
+.imp-hero {
+  background: radial-gradient(circle at center top, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  text-align: center;
+  padding: 100px 24px 80px;
+}
+.imp-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--color-text-main);
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+.imp-hero p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- INTRO TEXT (glassmorphism card) ---------- */
+.imp-intro {
+  background: var(--color-bg-light);
+  padding: 60px 24px;
+}
+.imp-intro-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 40px 44px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+}
+.imp-intro-card p + p {
+  margin-top: 16px;
+}
+
+/* ---------- SECTION HEADER ---------- */
+.imp-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.imp-section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 10px;
+}
+.imp-section-header p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* ---------- INITIATIVES SECTION ---------- */
+.imp-initiatives {
+  background: var(--color-bg-light);
+  padding: 60px 24px 80px;
+}
+.imp-initiatives-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- CARDS GRID ---------- */
+.imp-cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.imp-cards-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* ---------- INITIATIVE CARD ---------- */
+.imp-card {
+  background: var(--color-bg-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.imp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.imp-card-image {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-grad-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 3rem;
+  overflow: hidden;
+}
+.imp-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imp-card-body {
+  padding: 24px 26px 28px;
+}
+.imp-card-body h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 6px;
+}
+.imp-card-impact {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 14px;
+}
+.imp-card-body p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---------- EXPLORE OTHER AREAS ---------- */
+.imp-explore {
+  background: var(--color-bg-secondary);
+  padding: 60px 24px 70px;
+}
+.imp-explore-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.imp-explore h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 40px;
+}
+.imp-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.imp-explore-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  padding: 28px 26px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.imp-explore-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.imp-explore-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+.imp-explore-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.imp-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+.imp-explore-link:hover {
+  gap: 10px;
+}
+
+/* ---------- FLAGSHIP CTA ---------- */
+.imp-flagship-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+.imp-flagship-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.imp-flagship-btn:hover {
+  background: var(--color-primary);
+  color: var(--color-bg-white);
+}
+
+/* ---------- CTA ---------- */
+.imp-cta {
+  background: radial-gradient(circle at center bottom, rgba(254, 9, 121, 0.15) 0%, transparent 80%);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--color-text-main);
+}
+.imp-cta-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-secondary);
+  border: 1px solid rgba(152, 215, 194, 0.5);
+}
+.imp-cta h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+.imp-cta p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  max-width: 550px;
+  margin: 0 auto 30px;
+}
+.imp-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.imp-cta-btn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.imp-cta-btn.primary {
+  background: var(--color-secondary);
+  color: var(--color-text-main);
+  border: 2px solid var(--color-secondary);
+}
+.imp-cta-btn.primary:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+.imp-cta-btn.outline {
+  background: transparent;
+  color: var(--color-text-main);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.imp-cta-btn.outline:hover {
+  border-color: var(--color-text-main);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* ---------- FLAGSHIP PROJECT CARDS ---------- */
+.flagship-project {
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  background: var(--color-bg-white);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-border);
+}
+.flagship-project.reverse {
+  direction: rtl;
+}
+.flagship-project.reverse > * {
+  direction: ltr;
+}
+.flagship-project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-grad-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.flagship-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flagship-placeholder-img {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.flagship-project-content {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flagship-project-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 14px;
+}
+.flagship-project-content > p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+.flagship-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.flagship-stat {
+  flex: 1;
+  background: var(--color-bg-light);
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+  border: 1px solid #ece6f0;
+}
+.flagship-stat-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+.flagship-stat-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+.flagship-learn-more {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--color-grad-end);
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+.flagship-learn-more:hover {
+  background: var(--color-grad-end);
+  color: var(--color-bg-white);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .imp-cards-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .imp-explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .imp-hero {
+    padding: 80px 20px 60px;
+  }
+  .imp-hero h1 {
+    font-size: 2.2rem;
+  }
+  .imp-cards-3,
+  .imp-cards-2,
+  .imp-explore-grid {
+    grid-template-columns: 1fr;
+  }
+  .imp-intro-card {
+    padding: 28px 24px;
+  }
+  .imp-section-header h2 {
+    font-size: 1.8rem;
+  }
+  .imp-cta h2 {
+    font-size: 1.6rem;
+  }
+  .flagship-project {
+    grid-template-columns: 1fr;
+  }
+  .flagship-project.reverse {
+    direction: ltr;
+  }
+  .flagship-project-image {
+    min-height: 220px;
+  }
+  .flagship-project-content {
+    padding: 28px 24px;
+  }
+  .flagship-project-content h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .imp-hero h1 {
+    font-size: 1.8rem;
+  }
+  .imp-hero p {
+    font-size: 1rem;
+  }
+  .imp-card-image {
+    height: 180px;
+  }
+  .imp-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flagship-stats {
+    flex-direction: column;
+  }
+  .flagship-project-content {
+    padding: 20px 18px;
+  }
+}

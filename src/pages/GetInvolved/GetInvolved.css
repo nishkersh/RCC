@@ -1,0 +1,701 @@
+/* ===== GET INVOLVED PAGES — shared CSS for Member, Volunteer, Partner ===== */
+
+/* ---------- HERO ---------- */
+.gi-hero {
+  background: radial-gradient(circle at center top, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  text-align: center;
+  padding: 100px 24px 80px;
+}
+.gi-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--color-text-main);
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+.gi-hero p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- INTRO SPLIT (text + image side by side) ---------- */
+.gi-intro-split {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-intro-split-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.gi-intro-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+.gi-intro-text p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.gi-intro-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 32px;
+  background: var(--color-secondary);
+  color: var(--color-text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid var(--color-secondary);
+  transition: all 0.3s ease;
+}
+.gi-intro-btn:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+.gi-intro-image {
+  width: 100%;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-grad-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 3rem;
+}
+.gi-intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- BENEFITS / WHY JOIN GRID ---------- */
+.gi-benefits {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-benefits-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gi-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.gi-section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 10px;
+}
+.gi-section-header p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 550px;
+  margin: 0 auto;
+}
+.gi-benefits-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.gi-benefits-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.gi-benefit-card {
+  background: var(--color-bg-secondary);
+  border-radius: 16px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gi-benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.gi-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(152, 215, 194, 0.2);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 20px;
+  border: 1px solid rgba(152, 215, 194, 0.3);
+  box-shadow: 0 0 0 3px rgba(152, 215, 194, 0.15);
+}
+.gi-benefit-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 10px;
+}
+.gi-benefit-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* ---------- TIMELINE (How to Join) ---------- */
+.gi-timeline {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-timeline-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.gi-timeline-track {
+  position: relative;
+  padding-left: 0;
+}
+.gi-timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-secondary);
+}
+.gi-timeline-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  position: relative;
+}
+.gi-timeline-step:last-child {
+  margin-bottom: 0;
+}
+.gi-timeline-step:nth-child(odd) {
+  flex-direction: row;
+  text-align: right;
+}
+.gi-timeline-step:nth-child(odd) .gi-timeline-content {
+  padding-right: 50px;
+  padding-left: 0;
+}
+.gi-timeline-step:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+.gi-timeline-step:nth-child(even) .gi-timeline-content {
+  padding-left: 50px;
+  padding-right: 0;
+}
+.gi-timeline-content {
+  flex: 1;
+}
+.gi-timeline-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+.gi-timeline-content p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+.gi-timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  color: var(--color-text-main);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* ---------- FAQ ACCORDION ---------- */
+.gi-faq {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-faq-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.gi-faq-item {
+  background: var(--color-bg-white);
+  border-radius: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.3s ease;
+}
+.gi-faq-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+.gi-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  font-family: inherit;
+}
+.gi-faq-chevron {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+.gi-faq-chevron.open {
+  transform: rotate(180deg);
+}
+.gi-faq-answer {
+  padding: 0 24px 20px;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ---------- FORM SECTION ---------- */
+.gi-form-section {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.gi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.gi-form-group label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 6px;
+}
+.gi-form-group label span {
+  color: #e53e3e;
+}
+.gi-form-group input,
+.gi-form-group select,
+.gi-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--color-bg-white);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-text-main);
+}
+.gi-form-group input::placeholder,
+.gi-form-group textarea::placeholder {
+  color: var(--color-text-muted);
+}
+.gi-form-group input:focus,
+.gi-form-group select:focus,
+.gi-form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.15);
+}
+.gi-form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.gi-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.gi-form-submit {
+  padding: 14px 32px;
+  background: var(--color-secondary);
+  color: var(--color-text-main);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: 2px solid var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  font-family: inherit;
+}
+.gi-form-submit:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+/* ---------- PARTNERSHIP TYPES ---------- */
+.gi-partnership-types {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-partnership-types-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gi-partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.gi-partnership-card {
+  background: var(--color-bg-white);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gi-partnership-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.gi-partnership-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 10px;
+}
+.gi-partnership-card > p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.gi-partnership-card ul {
+  list-style: none;
+  padding: 0;
+}
+.gi-partnership-card ul li {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  padding: 5px 0 5px 20px;
+  position: relative;
+}
+.gi-partnership-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* ---------- VOLUNTEER STORIES / TESTIMONIALS ---------- */
+.gi-testimonials {
+  background: var(--color-bg-secondary);
+  padding: 60px 24px;
+}
+.gi-testimonials-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gi-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.gi-testimonial-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  padding: 28px 24px;
+  border-left: 4px solid var(--color-secondary);
+}
+.gi-testimonial-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.gi-testimonial-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 2px;
+}
+.gi-testimonial-card span {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+/* ---------- CTA ---------- */
+.gi-cta {
+  background: radial-gradient(circle at center bottom, rgba(254, 9, 121, 0.15) 0%, transparent 80%);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--color-text-main);
+}
+.gi-cta-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-secondary);
+  border: 1px solid rgba(152, 215, 194, 0.3);
+}
+.gi-cta h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+.gi-cta p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  max-width: 550px;
+  margin: 0 auto 30px;
+}
+.gi-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.gi-cta-btn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.gi-cta-btn.primary {
+  background: var(--color-secondary);
+  color: var(--color-text-main);
+  border: 2px solid var(--color-secondary);
+}
+.gi-cta-btn.primary:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+.gi-cta-btn.outline {
+  background: transparent;
+  color: var(--color-text-main);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.gi-cta-btn.outline:hover {
+  border-color: var(--color-text-main);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* ---------- OPPORTUNITIES GRID ---------- */
+.gi-opportunities {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-opportunities-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gi-opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.gi-opportunity-card {
+  background: var(--color-bg-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gi-opportunity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.gi-opportunity-icon-area {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-grad-dark) 100%);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.gi-opportunity-body {
+  padding: 24px 24px 28px;
+}
+.gi-opportunity-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 10px;
+}
+.gi-opportunity-body p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---------- HOW IT WORKS (numbered steps) ---------- */
+.gi-steps {
+  background: var(--color-bg-light);
+  padding: 80px 24px;
+}
+.gi-steps-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.gi-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.gi-step-card {
+  background: var(--color-bg-white);
+  border-radius: 16px;
+  padding: 30px 22px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.gi-step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+.gi-step-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+.gi-step-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .gi-benefits-grid-3,
+  .gi-opportunities-grid,
+  .gi-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gi-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gi-partnership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .gi-hero {
+    padding: 80px 20px 60px;
+  }
+  .gi-hero h1 {
+    font-size: 2.2rem;
+  }
+  .gi-intro-split-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .gi-intro-image {
+    height: 260px;
+  }
+  .gi-benefits-grid-3,
+  .gi-benefits-grid-2,
+  .gi-opportunities-grid,
+  .gi-testimonials-grid,
+  .gi-partnership-grid,
+  .gi-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .gi-section-header h2 {
+    font-size: 1.8rem;
+  }
+  .gi-intro-text h2 {
+    font-size: 1.6rem;
+  }
+  .gi-cta h2 {
+    font-size: 1.6rem;
+  }
+  .gi-timeline-track::before {
+    left: 16px;
+  }
+  .gi-timeline-step:nth-child(odd),
+  .gi-timeline-step:nth-child(even) {
+    flex-direction: row;
+    text-align: left;
+  }
+  .gi-timeline-step:nth-child(odd) .gi-timeline-content,
+  .gi-timeline-step:nth-child(even) .gi-timeline-content {
+    padding-left: 56px;
+    padding-right: 0;
+  }
+  .gi-timeline-dot {
+    left: 16px;
+    transform: translateX(-50%);
+  }
+  .gi-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .gi-hero h1 {
+    font-size: 1.8rem;
+  }
+  .gi-hero p {
+    font-size: 1rem;
+  }
+  .gi-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gi-benefit-card {
+    padding: 24px 20px;
+  }
+}

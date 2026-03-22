@@ -1,0 +1,590 @@
+/* ===== History & Legacy Page - Exact Replica ===== */
+
+/* --- Hero --- */
+.hl-hero {
+    background: radial-gradient(circle at center top, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+    border-bottom: 1px solid var(--color-border);
+    padding: 5rem 1rem 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hl-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 70%, rgba(241,196,15,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 40%);
+    pointer-events: none;
+}
+.hl-hero h1 {
+    color: var(--color-text-main);
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.hl-hero p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* --- Young Club (Who We Are style) --- */
+.hl-young-club {
+    background: linear-gradient(175deg, var(--color-grad-dark) 0%, var(--color-grad-dark) 40%, var(--color-bg-light) 40.1%, var(--color-bg-light) 100%);
+    padding: 6rem 1rem;
+    min-height: 480px;
+}
+.hl-young-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+}
+.hl-pill-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--color-bg-white);
+    margin-bottom: 1.5rem;
+}
+.hl-young-heading {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--color-bg-white);
+    line-height: 1.15;
+}
+.hl-young-heading span {
+    color: #F1C40F;
+}
+.hl-young-accent {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #F1C40F, #e6a800);
+    border-radius: 2px;
+    margin-top: 1rem;
+}
+.hl-glass-card {
+    background: rgba(74,35,90,0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.9);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+.hl-glass-card .highlight {
+    color: #F1C40F;
+    font-weight: 600;
+}
+.hl-glass-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 1.5rem 0;
+}
+
+/* --- Timeline Section --- */
+.hl-timeline-section {
+    background: var(--color-bg-light);
+    padding: 5rem 1rem;
+}
+.hl-timeline-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.hl-timeline-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+.hl-timeline-header p {
+    color: #777;
+    font-size: 1.05rem;
+}
+
+/* Timeline Container with vertical line */
+.hl-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px;
+}
+.hl-timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #F1C40F 0%, var(--color-grad-dark) 50%, #F1C40F 100%);
+    border-radius: 2px;
+}
+
+/* Year Badge on Timeline */
+.hl-year-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-left: 20px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.hl-year-badge::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid var(--color-bg-white);
+    box-shadow: 0 0 0 3px currentColor;
+}
+.hl-year-badge.gold {
+    background: #F1C40F;
+    color: var(--color-text-main);
+}
+.hl-year-badge.gold::before {
+    background: #F1C40F;
+    box-shadow: 0 0 0 3px #F1C40F;
+}
+.hl-year-badge.purple {
+    background: var(--color-grad-dark);
+    color: var(--color-bg-white);
+}
+.hl-year-badge.purple::before {
+    background: var(--color-grad-dark);
+    box-shadow: 0 0 0 3px var(--color-grad-dark);
+}
+
+/* Tenure Card */
+.hl-tenure-card {
+    background: var(--color-bg-white);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    margin-left: 20px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+}
+.hl-tenure-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+}
+.hl-tenure-card.gold-border::before {
+    background: linear-gradient(180deg, #F1C40F, #e6a800);
+}
+.hl-tenure-card.purple-border::before {
+    background: linear-gradient(180deg, var(--color-grad-dark), #6c3483);
+}
+
+.hl-tenure-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+.hl-tenure-info {
+    flex: 1;
+}
+.hl-tenure-pill {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.75rem;
+}
+.hl-tenure-pill.gold-pill {
+    background: rgba(241,196,15,0.15);
+    color: #b7950b;
+}
+.hl-tenure-pill.purple-pill {
+    background: rgba(74,35,90,0.1);
+    color: var(--color-text-main);
+}
+.hl-tenure-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+.hl-tenure-info .hl-president-name {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+.hl-tenure-info .hl-president-name span {
+    color: #F1C40F;
+    font-weight: 600;
+}
+.hl-tenure-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--color-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border: 3px solid rgba(74,35,90,0.15);
+    flex-shrink: 0;
+    /* Replace with: background-image: url('photo.jpg'); background-size: cover; */
+}
+.hl-tenure-desc {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+.hl-tenure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+.hl-tenure-sub-card {
+    background: #f9f7fb;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.hl-tenure-sub-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.hl-tenure-sub-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.hl-tenure-sub-card li {
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.hl-tenure-sub-card li::before {
+    content: '•';
+    color: #F1C40F;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+/* --- Growing Impact --- */
+.hl-impact {
+    background: var(--color-bg-light);
+    padding: 5rem 1rem;
+}
+.hl-impact-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.hl-impact-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: rgba(74,35,90,0.08);
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+.hl-impact-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+.hl-impact-header p {
+    color: #777;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+.hl-impact-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+.hl-impact-card {
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.hl-impact-card:hover {
+    transform: translateY(-4px);
+}
+.hl-impact-card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.hl-impact-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+.hl-impact-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Card Variants */
+.hl-impact-card.card-dark {
+    background: linear-gradient(145deg, var(--color-grad-dark), var(--color-grad-dark));
+    color: var(--color-bg-white);
+}
+.hl-impact-card.card-dark .hl-impact-card-icon {
+    background: rgba(241,196,15,0.15);
+}
+.hl-impact-card.card-light {
+    background: var(--color-bg-white);
+    color: var(--color-text-main);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+.hl-impact-card.card-light .hl-impact-card-icon {
+    background: rgba(74,35,90,0.08);
+}
+.hl-impact-card.card-gold {
+    background: #F1C40F;
+    color: var(--color-text-main);
+}
+.hl-impact-card.card-gold .hl-impact-card-icon {
+    background: rgba(74,35,90,0.1);
+}
+.hl-impact-card.card-lavender {
+    background: #ede5f3;
+    color: var(--color-text-main);
+}
+.hl-impact-card.card-lavender .hl-impact-card-icon {
+    background: rgba(74,35,90,0.08);
+}
+
+/* --- Cumulative Impact Stats --- */
+.hl-stats {
+    background: var(--color-bg-light);
+    padding: 0 1rem 5rem;
+}
+.hl-stats-card {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(74,35,90,0.04);
+    border: 1px solid rgba(74,35,90,0.08);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+}
+.hl-stats-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.hl-stats-header h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+.hl-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+.hl-stat-item .hl-stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.hl-stat-item .hl-stat-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* --- CTA Section --- */
+.hl-cta {
+    background: radial-gradient(circle at center bottom, rgba(254, 9, 121, 0.15) 0%, transparent 80%);
+    border-top: 1px solid var(--color-border);
+    padding: 6rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hl-cta h2 {
+    color: var(--color-text-main); /* Updated color */
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.hl-cta p {
+    color: var(--color-text-muted); /* Updated color */
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+.hl-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.hl-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.hl-cta-btn.primary {
+    background: #F1C40F;
+    color: var(--color-text-main);
+}
+.hl-cta-btn.primary:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}
+.hl-cta-btn.outline {
+    background: transparent;
+    color: var(--color-bg-white);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+.hl-cta-btn.outline:hover {
+    border-color: rgba(255,255,255,0.6);
+    transform: translateY(-2px);
+}
+.hl-cta-btn.secondary {
+    background: transparent;
+    color: var(--color-text-main);
+    border: 2px solid rgba(74,35,90,0.4); /* Adjusted border color for light background */
+}
+.hl-cta-btn.secondary:hover {
+    border-color: var(--color-text-main);
+    box-shadow: 0 0 15px rgba(74,35,90,0.1); /* Adjusted shadow for light background */
+    transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .hl-impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hl-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hl-hero h1 {
+        font-size: 2rem;
+    }
+    .hl-young-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hl-young-heading {
+        font-size: 2rem;
+    }
+    .hl-young-accent {
+        margin: 1rem auto 0 auto;
+    }
+    .hl-young-club {
+        background: linear-gradient(175deg, var(--color-grad-dark) 0%, var(--color-grad-dark) 55%, var(--color-bg-light) 55.1%, var(--color-bg-light) 100%);
+    }
+    .hl-timeline {
+        padding-left: 30px;
+    }
+    .hl-timeline::before {
+        left: 10px;
+    }
+    .hl-year-badge {
+        margin-left: 10px;
+    }
+    .hl-year-badge::before {
+        left: -24px;
+    }
+    .hl-tenure-card {
+        margin-left: 10px;
+        padding: 1.5rem;
+    }
+    .hl-tenure-grid {
+        grid-template-columns: 1fr;
+    }
+    .hl-tenure-header {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    .hl-impact-grid {
+        grid-template-columns: 1fr;
+    }
+    .hl-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hl-timeline-header h2,
+    .hl-impact-header h2,
+    .hl-cta h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hl-hero {
+        padding: 3rem 1rem 4rem;
+    }
+    .hl-hero h1 {
+        font-size: 1.6rem;
+    }
+    .hl-stat-item .hl-stat-number {
+        font-size: 1.8rem;
+    }
+}
